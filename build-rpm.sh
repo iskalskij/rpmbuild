@@ -13,7 +13,7 @@ echo -e
 
 for file in *
 do
-rpmrebuild -d /mnt/sdb/build/packages --change-spec-preamble='sed -e "s/^Packager:.*/Packager:MySystem/" -e "s/^Vendor:.*/Vendor:MySystemLTD/"' $file
+rpmrebuild -d /var/lib/jenkins/packages --change-spec-preamble='sed -e "s/^Packager:.*/Packager:MySystem/" -e "s/^Vendor:.*/Vendor:MySystemLTD/"' $file
 done
 
 #rm -rf *
