@@ -5,7 +5,7 @@
 
 #mkdir -v /mnt/sdb/build/rpm
 #mkdir -v /mnt/sdb/build/packages
-#cd /mnt/sdb/build/rpm
+cd /mnt/sdb/build/rpm
 
 echo -e
 #time wget -r -np -nd -A "*.rpm*" http://mirror.centos.org/centos/7/os/x86_64/Packages/ && echo OK || exit 1
