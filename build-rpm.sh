@@ -16,7 +16,7 @@ do
 sudo rpmrebuild -d /mnt/sdb/build/packages --change-spec-preamble='sed -e "s/^Packager:.*/Packager:MySystem/" -e "s/^Vendor:.*/Vendor:MySystemLTD/"' $
 done
 
-rm -rf *
+#rm -rf *
 #createrepo packages/x86_64/
 #yum install sendmail
 
