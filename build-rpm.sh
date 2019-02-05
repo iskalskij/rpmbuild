@@ -13,10 +13,12 @@ time wget -r -np -nd -A "*.rpm*" ftp://centos.colocall.net/centos/7/os/x86_64/Pa
 
 for file in *
 do
-sudo rpmrebuild -d /mnt/sdb/build/packages --change-spec-preamble='sed -e "s/^Packager:.*/Packager:MySystem/" -e "s/^Vendor:.*/Vendor:MySystemLTD/"' -p -n $file
+sudo rpmrebuild -d /mnt/sdb/build/packages --change-spec-preamble='sed -e "s/^Packager:.*/Packager:MySystem/" -e "s/^Vendor:.*/Vendor:MySystemLTD/"' $
 done
 
+rm -rf *
 #createrepo packages/x86_64/
 #yum install sendmail
 
 exit 0
+
